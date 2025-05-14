@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VISCA</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+     button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 24px;
+    line-height: 1.2;
+    
+}
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .top-bar {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 30px;
+        }
+
+        .top-bar img {
+            height: 50px;
+        }
+
+        .top-bar button {
+          font-size: 14px;
+     background-color: #ffcc00;
+    color: black;
+     padding-top: 12px; /* slightly more than before */
+    padding-bottom: 8px; /* keep or adjust as needed */
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; }
+
+.cta {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Increase this value to make the text larger */
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+        .hero {
+            text-align: center;
+            padding: 30px 20px 10px;
+        }
+
+        .hero img {
+            height: 230px;
+            margin-bottom: 5px;
+        }
+
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            font-size: 38px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            margin: 15px 0 20px;
+            text-transform: uppercase;
+        }
+
+        .highlight-blue {
+            color: #DAA520;
+        }
+
+        .highlight-gold {
+            color: #DAA520;
+        }
+
+        .hero .cta {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-weight: bold;
+            padding-top: 12px; /* slightly more than before */
+    padding-bottom: 8px; /* keep or adjust as needed */
+    padding-left: 20px;
+    padding-right: 20px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .tryon-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .tryon-section h3 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .tryon-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tryon-pair {
+            position: relative;
+            display: flex;
+            gap: 10px;
+        }
+
+        .tryon-pair img {
+            width: 250px;
+            margin-bottom: 0;
+        }
+
+        .tag {
+            position: absolute;
+            bottom: 10px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            font-family: sans-serif;
+            border-radius: 6px;
+        }
+
+        .tag.before {
+            left: 10px;
+        }
+
+        .tag.after {
+            right: 10px;
+        }
+
+        .waitlist-section {
+            background-color: black;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .waitlist-section h2 {
+            font-size: 32px;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 40px;
+        }
+
+        .benefit-grid-styled {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 60px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    justify-items: center;
+}
+
+.benefit-item {
+  background-color: #333333; /* Or try: #2c2c2c, #333333 */
+    padding: 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #333;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .waitlist-button {
+            background-color: #ffcc33;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            padding-top: 14px; /* slightly more than before */
+    padding-bottom: 10px; /* keep or adjust as needed */
+    padding-left: 20px;
+    padding-right: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+.how-it-works-section {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.how-it-works-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.how-it-works-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.how-it-works-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.how-img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.how-it-works-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.step {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 12px;
+    min-width: 240px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.arrow {
+    font-size: 22px;
+}
+.how-btn {
+    background-color: #ffcc33;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+     padding-top: 14px; /* slightly more than before */
+    padding-bottom: 10px; /* keep or adjust as needed */
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.section-spacer {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+.comparison-section {
+  background-color: #000;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.comparison-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.highlight-white {
+  color: white;
+}
+
+.highlight-gold {
+  color: #DAA520;
+}
+
+.comparison-section .subhead {
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #ccc;
+}
+
+.comparison-table {
+  max-width: 600px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.table-row {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.feature {
+  text-align: left;
+  font-weight: 500;
+}
+
+.check {
+  font-size: 18px;
+  color: #00cc66;
+  font-weight: bold;
+}
+
+.cta-area {
+  text-align: center;
+}
+
+.cta-area h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.cta-area p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.cta-yellow {
+  background-color: #ffcc33;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+   padding-top: 18px; /* slightly more than before */
+    padding-bottom: 14px; /* keep or adjust as needed */
+    padding-left: 26px;
+    padding-right: 26px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px 60px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+
+.footer .social-icons {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 22px;
+}
+
+.footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffd966; /* bright gold on hover */
+}
+
+.footer .copyright {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  .popup-content {
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+  .popup-logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-height: 80px;
+  }
+  .popup-close {
+   font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: black;
+  }
+
+  .popup-close:hover {
+  transform: scale(1.2);
+  color: #ffcc00; /* gold or your chosen hover color */
+}
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="url"],
+  form input[type="tel"],
+  form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+  }
+  form .cta {
+    margin-top: 25px;
+    background-color: #ffd966;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+
+
+button:hover {
+    transform: scale(1.025);
+}
+
+.hero .cta {
+    position: relative;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.hero .cta::after {
+    content: "";
+    display: block;
+    margin: 2px auto 0;
+    width: 100%;
+    height: 2px;
+    background-color: #DAA520;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.hero .cta:hover {
+    transform: scale(1.05);
+}
+
+.hero .cta:hover::after {
+    opacity: 1;
+}
+
+button:not(.hero .cta) {
+    position: relative;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+button:not(.hero .cta)::after {
+    content: "";
+    display: block;
+    margin: 0.5px auto 0; /* half the space */
+   
+    height: 2px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+button:not(.hero .cta):hover {
+    transform: scale(1.025);
+}
+
+button:not(.hero .cta):hover::after {
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="images/white_icon.png" alt="Icon">
+        <button class="open-modal">TRY IT</button>
+    </div>
+
+    <div class="hero">
+        <img src="images/white_visca_logo.png" alt="VISCA Logo">
+        <h1>Virtual Try-On Solutions for Ecommerce</h1>
+        <h2>
+            <span class="highlight-gold">Reduced</span> returns,
+            <span class="highlight-gold">boosted</span> conversions,
+            <span class="highlight-gold">standout</span> visuals.
+        </h2>
+        <button class="cta open-modal">GET YOUR <span class="highlight-gold">FREE DEMO</span></button>
+    </div>
+
+    <div class="tryon-section">
+        <h3>Giving You an Edge Your <span class="highlight-gold" style="font-style: italic;">Customers Can See</span>.</h3>
+
+        <div class="tryon-row">
+            <div class="tryon-pair">
+                <img src="images/female_model.png" alt="Before">
+                <span class="tag before">Before</span>
+                <img src="images/female_model_dress.png" alt="After">
+                <span class="tag after">After</span>
+            </div>
+            <div class="tryon-pair">
+                <img src="images/male_model.png" alt="Before" style="height: 375px; width: auto;">
+                <span class="tag before">Before</span>
+                <img src="images/male_model_shirt.png" alt="After" style="height: 375px; width: auto;">
+                <span class="tag after">After</span>
+            </div>
+            <div class="tryon-pair">
+                <img src="images/ear_model.png" alt="Before">
+                <span class="tag before">Before</span>
+                <img src="images/ear_model_earrings.png" alt="After">
+                <span class="tag after">After</span>
+            </div>
+        </div>
+    </div>
+
+   <div class="waitlist-section">
+    <h2><span class="highlight-gold">JOIN THE WAITLIST</span></h2>
+    <div class="benefit-grid-styled">
+        <div class="benefit-item">✨ BUILDS BRAND TRUST AND ATTENTION.</div>
+        <div class="benefit-item">🧲 TURNS SCEPTICAL CUSTOMERS INTO ACTIVE LEADS.</div>
+        <div class="benefit-item">
+        💰 COMPOUNDED GROWTH<br>
+        More purchases + fewer returns = MASSIVE gains.
+    </div>
+        <div class="benefit-item">🔥 LIMITED ACCESS - Join early to get access quicker.</div>
+    </div>
+    <button class="waitlist-button open-modal">JOIN NOW</button>
+
+    </div>
+
+<div class="section-spacer"></div>
+
+ <div class="how-it-works-section">
+    <h2><span class="highlight-gold">HOW IT WORKS</span></h2>
+    <div class="how-it-works-content">
+        <div class="how-it-works-images">
+            <img src="images/face_model.png" alt="Before" class="how-img">
+            <img src="images/face_model_sunglasses.png" alt="After" class="how-img">
+        </div>
+        <div class="how-it-works-steps">
+            <div class="step">📸 User Upload</div>
+            <div class="arrow">⬇️</div>
+            <div class="step">🔐 Request Authentication</div>
+            <div class="arrow">⬇️</div>
+            <div class="step">🧩 Image Layering</div>
+            <div class="arrow">⬇️</div>
+            <div class="step">📬 Image Response</div>
+        </div>
+    </div>
+    <button class="how-btn">WATCH VIDEO</button>
+</div>
+
+<div class="section-spacer"></div>
+
+
+  <div class="cta-area">
+    <h3>GET STARTED TODAY</h3>
+    <p>Book your <span class="highlight-gold">FREE DEMO</span> and see how we can supercharge your growth.</p>
+    
+  </div>
+
+<div class="comparison-table">
+  <div class="table-row">
+    <span class="feature">Live Try-On Feature</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">Before & After Product Views</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">Conversion-Boosting Visuals</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">Custom Branding Support</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">Mobile Optimised</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">Fast Load Times</span>
+    <span class="check">✔️</span>
+  </div>
+  <div class="table-row">
+    <span class="feature">No-Code Integration</span>
+    <span class="check">✔️</span>
+  </div>
+</div>
+
+
+  <div class="cta-area">
+   
+    <button class="cta-yellow open-modal">BOOK DEMO</button>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<footer class="footer">
+  <p>Follow us</p>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p class="copyright">© 2025 VISCA Solutions. All rights reserved.</p>
+</footer>
+
+<div id="contactPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <img src="images/visca_logo.png" alt="VISCA Logo" class="popup-logo">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <form id="contactForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="email" required>
+
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" placeholder="website URL">
+
+      <label for="phone">Contact Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="phone" required>
+
+      <label for="product">Try-On Product:</label>
+      <input type="file" id="product" name="product" accept="image/png, image/jpeg">
+
+      <label for="model">Try-On Model:</label>
+      <input type="file" id="model" name="model" accept="image/png, image/jpeg">
+
+      <button type="submit" class="cta">Join Now</button>
+    </form>
+  </div>
+</div>
+
+</body>
+
+<script>
+  function openPopup() {
+    document.getElementById('contactPopup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('contactPopup').style.display = 'none';
+  }
+
+ 
+  
+   
+
+  // ✅ Enable class-based triggers
+  window.onload = function () {
+    const triggers = document.querySelectorAll('.open-modal');
+    triggers.forEach(button => {
+      button.addEventListener('click', openPopup);
+    });
+  };
+</script>
+
+
+</html>
