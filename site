@@ -668,7 +668,11 @@ button:not(.hero .cta):hover::after {
   <div class="popup-content">
     <img src="images/visca_logo.png" alt="VISCA Logo" class="popup-logo">
     <span class="popup-close" onclick="closePopup()">&times;</span>
-    <form id="contactForm">
+    <form id="contactForm"
+action="https://hook.eu2.make.com/dunzyioruftdl27vsev1ud3idyhvyxdb" 
+  method="POST" 
+  enctype="multipart/form-data"
+>
       <label for="fullName">Full Name:</label>
       <input type="text" id="fullName" name="fullName" placeholder="name" required>
 
