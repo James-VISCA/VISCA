@@ -5,7 +5,7 @@
     <title>VISCA</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+
     <style>
 
      button {
@@ -358,8 +358,8 @@
   color: black;
   font-weight: bold;
   font-size: 20px;
-   padding-top: 15px; /* slightly more than before */
-    padding-bottom: 11px; /* keep or adjust as needed */
+   padding-top: 18px; /* slightly more than before */
+    padding-bottom: 14px; /* keep or adjust as needed */
     padding-left: 26px;
     padding-right: 26px;
   border: none;
@@ -417,7 +417,8 @@
     border-radius: 12px;
     position: relative;
     width: 100%;
-    max-width: 500px;
+     max-width: 600px;
+  min-height: 620px;
   }
   .popup-logo {
     display: block;
@@ -505,7 +506,7 @@ button:not(.hero .cta) {
     display: inline-block;
 }
 
-button:not(.hero .cta)::after {
+button:not(.hero .cta):not(.cta)::after {
     content: "";
     display: block;
     margin: 0.5px auto 0; /* half the space */
@@ -524,6 +525,38 @@ button:not(.hero .cta):hover::after {
     opacity: 1;
 }
 
+.gold-btn {
+  background-color: #DAA520;
+  color: black;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gold-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Prevent underline on hover */
+.gold-btn::after {
+  display: none !important;
+}
+
+/* Sizing classes */
+.gold-large {
+  width: 260px;
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.gold-small {
+  width: 140px;
+  font-size: 16px;
+  padding: 12px 24px;
+}
     </style>
 </head>
 <body>
@@ -602,7 +635,7 @@ button:not(.hero .cta):hover::after {
             <div class="step">📬 Image Response</div>
         </div>
     </div>
-    <button class="how-btn">WATCH VIDEO</button>
+   <button class="how-btn" onclick="showDemoVideo()">WATCH VIDEO</button>
 </div>
 
 <div class="section-spacer"></div>
@@ -645,11 +678,58 @@ button:not(.hero .cta):hover::after {
   </div>
 </div>
 
-
-  <div class="cta-area">
+<div class="cta-area">
    
     <button class="cta-yellow open-modal">BOOK DEMO</button>
   </div>
+
+<section style="display: flex; justify-content: center; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="background-color: #000; border-radius: 20px; padding: 40px; max-width: 1100px; width: 100%; box-shadow: 0 0 20px rgba(0,0,0,0.5); text-align: center;">
+    <h2 style="color: white; font-size: 2rem; font-weight: 500;">
+      PRODUCTS WE HAVE<br><span style="color: #fbbf24; font-weight: 700;">SEEN AMAZING RESULTS WITH</span>
+    </h2>
+
+    <div style="margin: 40px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Earrings
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Sunglasses
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Dresses
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Shirts
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Jeans
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Watches
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Jackets
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Shoes
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Bracelets
+      </div>
+      <div style="border: 1px solid white; border-radius: 12px; padding: 16px; color: white; font-weight: 600;">
+        <span style="color: #fbbf24;">✔</span> Hoodies
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; color: white; font-size: 1.25rem;">
+      <span style="color: #fbbf24; font-weight: 700;">AVERAGE 23X ROI</span>
+    </div>
+  </div>
+</section>
+
+
+  
 </div>
 
 <div class="section-spacer"></div>
@@ -668,21 +748,17 @@ button:not(.hero .cta):hover::after {
   <div class="popup-content">
     <img src="images/visca_logo.png" alt="VISCA Logo" class="popup-logo">
     <span class="popup-close" onclick="closePopup()">&times;</span>
-    <form id="contactForm"
-action="https://hook.eu2.make.com/dunzyioruftdl27vsev1ud3idyhvyxdb" 
-  method="POST" 
-  enctype="multipart/form-data"
->
-      <label for="fullName">Full Name:</label>
+    <form id="contactForm">
+      <label for="fullName">Full Name*:</label>
       <input type="text" id="fullName" name="fullName" placeholder="name" required>
 
-      <label for="email">Email:</label>
+      <label for="email">Email*:</label>
       <input type="email" id="email" name="email" placeholder="email" required>
 
       <label for="website">Website:</label>
       <input type="url" id="website" name="website" placeholder="website URL">
 
-      <label for="phone">Contact Number:</label>
+      <label for="phone">Contact Number*:</label>
       <input type="tel" id="phone" name="phone" placeholder="phone" required>
 
       <label for="product">Try-On Product:</label>
@@ -696,9 +772,87 @@ action="https://hook.eu2.make.com/dunzyioruftdl27vsev1ud3idyhvyxdb"
   </div>
 </div>
 
+<!-- Video Popup -->
+<div id="videoPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content" style="max-width: 96vw; width: 1200px; padding: 0; border-radius: 16px; overflow: hidden; position: relative;">
+    
+
+    <video id="demoVideo" width="100%" height="auto" controls style="display: block; width: 100%; height: auto; max-height: 85vh; background-color: black;">
+      <source src="videos/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+
+
+    <div id="videoControlBtn" onclick="togglePlay()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: rgb(139, 139, 139); cursor: pointer; z-index: 9; display: none; opacity: 1; transition: opacity 0.3s ease; pointer-events: auto; user-select: none;">▶</div>
+  </div>
+<div style="
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+">
+  <button onclick="closeVideoPopup()" style="
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    Close Video
+  </button>
+
+</div>
+</div>
+
+
+<!-- Submission Success Popup -->
+<div id="successPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <img src="images/visca_logo.png" alt="VISCA Logo" class="popup-logo">
+    <span class="popup-close" onclick="closeSuccessPopup()">&times;</span>
+    <h2 style="color: #DAA520; font-size: 28px; text-align: center;">Thanks for reaching out!</h2>
+    <p style="color: rgb(0, 0, 0); font-size: 16px; text-align: center;">
+      Your request has been submitted. We’ll get back to you with your <strong>personal</strong> demo within <strong>24 hours</strong>.
+    </p>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 80px;">
+ <button onclick="showDemoVideo()" class="gold-btn gold-large">Watch Live Demo</button>
+  <button onclick="closeSuccessPopup();" class="gold-btn gold-small">Home</button>
+</div>
+
+  </div>
+</div>
+
 </body>
 
 <script>
+
+ function openVideoPopup() {
+  const popup = document.getElementById('videoPopup');
+  const video = document.getElementById('demoVideo');
+  const controlBtn = document.getElementById('videoControlBtn');
+
+  popup.style.display = 'flex';
+  video.currentTime = 0;
+  video.play();
+
+  video.oncanplay = () => {
+    controlBtn.innerHTML = '❚❚';
+    controlBtn.style.display = 'none';
+    controlBtn.style.opacity = '0';
+  };
+}
+
+function closeSuccessPopup() {
+  document.getElementById('successPopup').style.display = 'none';
+}
+
   function openPopup() {
     document.getElementById('contactPopup').style.display = 'flex';
   }
@@ -707,17 +861,46 @@ action="https://hook.eu2.make.com/dunzyioruftdl27vsev1ud3idyhvyxdb"
     document.getElementById('contactPopup').style.display = 'none';
   }
 
- 
-  
-   
-
-  // ✅ Enable class-based triggers
   window.onload = function () {
     const triggers = document.querySelectorAll('.open-modal');
     triggers.forEach(button => {
       button.addEventListener('click', openPopup);
     });
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successPopup").style.display = "flex";
+      this.reset();
+    });
   };
+
+  function openSuccessPopup() {
+    document.getElementById('successPopup').style.display = 'flex';
+  }
+
+  function closeSuccessPopup() {
+  document.getElementById('successPopup').style.display = 'none';
+  closePopup(); // This will also close the form underneath
+}
+
+
+  function showDemoVideo() {
+  closeSuccessPopup();   // hide the success popup first
+  openVideoPopup();      // then open the video popup
+}
+
+function closeVideoPopup() {
+  const popup = document.getElementById('videoPopup');
+  const video = document.getElementById('demoVideo');
+  const controlBtn = document.getElementById('videoControlBtn');
+
+  popup.style.display = 'none';
+  video.pause();
+  video.currentTime = 0;
+  controlBtn.style.display = 'none';
+}
+
+
 </script>
 
 
