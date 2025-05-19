@@ -21,15 +21,15 @@ button {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 48px;
+            padding: 4px 53px;
         }
 
         .top-bar img {
-            height: 55px;
+            height: 63px;
         }
 
         .top-bar button {
-          font-size: 16px;
+          font-size: 18px;
      background-color: #ffcc00;
     color: black;
      padding-top: 12px; /* slightly more than before */
@@ -58,7 +58,7 @@ button {
         }
 
         .hero img {
-            height: 355px;
+            height: 363px;
             margin-bottom: 15px;
         }
 
