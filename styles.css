@@ -21,11 +21,11 @@ button {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 30px;
+            padding: 4px 40px;
         }
 
         .top-bar img {
-            height: 50px;
+            height: 55px;
         }
 
         .top-bar button {
