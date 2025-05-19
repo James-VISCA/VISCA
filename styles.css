@@ -21,11 +21,11 @@ button {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 53px;
+            padding: 4px 55px;
         }
 
         .top-bar img {
-            height: 63px;
+            height: 50px;
         }
 
         .top-bar button {
@@ -58,7 +58,7 @@ button {
         }
 
         .hero img {
-            height: 363px;
+            height: 373px;
             margin-bottom: 15px;
         }
 
