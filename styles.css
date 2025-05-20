@@ -21,15 +21,15 @@ button {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 55px;
+            padding: 4px 45px;
         }
 
         .top-bar img {
-            height: 74px;
+            height: 60px;
         }
 
         .top-bar button {
-          font-size: 18px;
+          font-size: 17px;
      background-color: #ffcc00;
     color: black;
      padding-top: 12px; /* slightly more than before */
