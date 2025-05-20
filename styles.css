@@ -21,11 +21,11 @@ button {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 45px;
+            padding: 4px 40px;
         }
 
         .top-bar img {
-            height: 60px;
+            height: 55px;
         }
 
         .top-bar button {
@@ -58,14 +58,14 @@ button {
         }
 
         .hero img {
-            height: 400px;
+            height: 363px;
             margin-bottom: 15px;
         }
 
         .hero h1 {
             font-family: 'Georgia', serif;
             font-weight: bold;
-            font-size: 49px;
+            font-size: 48px;
             margin: 0;
             text-transform: uppercase;
         }
@@ -78,7 +78,7 @@ button {
             text-transform: uppercase;
         }
 
-        .highlight-blue {
+        .highlight-0120blue {
             color: #DAA520;
         }
 
@@ -90,10 +90,10 @@ button {
             background-color:#ffcc33;
             color: rgb(0, 0, 0);
             font-weight: bold;
-            padding-top: 14px; /* slightly more than before */
-    padding-bottom: 10px; /* keep or adjust as needed */
-    padding-left: 22px;
-    padding-right: 22px;
+            padding-top: 12px; /* slightly more than before */
+    padding-bottom: 8px; /* keep or adjust as needed */
+    padding-left: 20px;
+    padding-right: 20px;
             border-radius: 8px;
             border: none;
             margin-top: 20px;
@@ -111,8 +111,9 @@ button {
 
         .tryon-section h3 {
             font-family: 'Arial Black', sans-serif;
-            font-size: 34px;
-            margin-bottom: 30px;
+            font-size: 34px;74
+    10
+            .1m041argin-bottom: 30px;
         }
 
         .tryon-row {
@@ -154,7 +155,10 @@ button {
 
         .waitlist-section {
             background-color: black;
-            padding: 60px 30px;
+            padding-top: 60px; /* slightly more than before */
+            padding-bottom: 150px; /* keep or adjust as needed */
+            padding-left: 20px;
+            padding-right: 20px;
             text-align: center;
         }
 
@@ -204,7 +208,6 @@ button {
     padding-right: 22px;
             border: none;
             border-radius: 12px;
-            cursor: pointer;
             cursor: pointer;
         }
 .how-it-works-section {
