@@ -174,30 +174,37 @@ button {
 }
 
 .benefit-item {
-  background-color: #333333; /* Or try: #2c2c2c, #333333 */
-    padding: 24px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid #333;
-    text-align: center;
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 16px;
+  padding: 30px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  min-height: 180px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
         .waitlist-button {
             background-color: #ffcc33;
             color: black;
             font-weight: bold;
-            font-size: 18px;
-            padding-top: 14px; /* slightly more than before */
-    padding-bottom: 10px; /* keep or adjust as needed */
-    padding-left: 20px;
-    padding-right: 20px;
+            font-size: 20px;
+            padding-top: 16px; /* slightly more than before */
+    padding-bottom: 12px; /* keep or adjust as needed */
+    padding-left: 22px;
+    padding-right: 22px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
+            cursor: pointer;
             cursor: pointer;
         }
 .how-it-works-section {
