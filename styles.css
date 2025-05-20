@@ -268,17 +268,17 @@ button {
     font-size: 22px;
 }
 .how-btn {
-    background-color: #ffcc33;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-     padding-top: 14px; /* slightly more than before */
-    padding-bottom: 10px; /* keep or adjust as needed */
-    padding-left: 20px;
-    padding-right: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+   background-color: #ffcc33;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 16px; /* slightly more than before */
+            padding-bottom: 12px; /* keep or adjust as needed */
+            padding-left: 22px;
+            padding-right: 22px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
 }
 
 .section-spacer {
