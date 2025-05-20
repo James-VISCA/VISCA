@@ -90,10 +90,10 @@ button {
             background-color:#ffcc33;
             color: rgb(0, 0, 0);
             font-weight: bold;
-            padding-top: 12px; /* slightly more than before */
-    padding-bottom: 8px; /* keep or adjust as needed */
-    padding-left: 20px;
-    padding-right: 20px;
+            padding-top: 14px; /* slightly more than before */
+    padding-bottom: 10px; /* keep or adjust as needed */
+    padding-left: 22px;
+    padding-right: 22px;
             border-radius: 8px;
             border: none;
             margin-top: 20px;
