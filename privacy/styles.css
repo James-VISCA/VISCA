@@ -1,0 +1,47 @@
+/* Privacy Page Styling */
+.privacy-page {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  padding: 40px 20px;
+}
+
+.privacy-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.privacy-hero h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.privacy-hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.privacy-content h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  color: var(--slate-blue);
+}
+
+.privacy-content p,
+.privacy-content a {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.privacy-content a {
+  color: var(--white);
+  text-decoration: underline;
+}
