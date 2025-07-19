@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who are we?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { background:#000; color:#fff; min-height:100vh; margin:0; }
+    .org-wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; }
+    .org-row { display:flex; gap:96px; margin-bottom:0; }
+    .org-card { border-radius:20px; padding:40px 56px; min-width:320px; display:flex; flex-direction:column; align-items:center; box-shadow:0 2px 16px #0000; background:none; }
+    .org-img { width:130px; height:130px; background:#222; border-radius:12px; margin-bottom:24px; display:flex; align-items:center; justify-content:center; }
+    .org-title { font-weight:600; margin-bottom:16px; font-size:1.7rem; text-align:center; }
+    .org-desc { color:var(--text-primary,#bbb); font-size:1.25rem; text-align:center; line-height:1.6; white-space:pre-line; }
+    .org-connector-wrap { width: 520px; max-width: 90vw; margin: 0 auto; display: flex; justify-content: center; align-items: flex-start; height: 120px; position: relative; }
+    .org-connector-svg { width: 520px; height: 120px; display: block; }
+    @media (max-width:900px) { .org-connector-svg { width: 90vw; } }
+    .org-logo { margin-top:24px; display:flex; justify-content:center; }
+    .org-logo img { width:150px; height:auto; background:none; border-radius:0; display:block; margin:0 auto; }
+    .org-name { margin-top:10px; font-size:1.15rem; font-weight:700; color:var(--text-primary,#fff); text-align:center; }
+    @media (max-width:900px) { .org-row { flex-direction:column; gap:48px; } .org-card { min-width:0; width:90vw; } }
+    .vsl-placeholder {
+      margin: 60px auto 0 auto;
+      width: 480px;
+      max-width: 90vw;
+      height: 270px;
+      background: #222;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 18px;
+      border: 2px dashed #444;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="org-wrap">
+    <div class="org-row">
+      <div class="org-card">
+        <div class="org-img"></div>
+        <div class="org-name">James Porter</div>
+        <div class="org-title">Co-Founder/COO</div>
+        <div class="org-desc">Applied Artificial Intelligence<br>Queen Mary University of London</div>
+      </div>
+      <div class="org-card">
+        <div class="org-img"></div>
+        <div class="org-name">Nelson Porter</div>
+        <div class="org-title">Co-Founder/CMO</div>
+        <div class="org-desc">Marketing<br>Portsmouth University of London</div>
+      </div>
+    </div>
+    <div class="org-connector-wrap">
+      <svg class="org-connector-svg" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="260" y2="60" stroke="#fff" stroke-width="4" />
+        <line x1="520" y1="0" x2="260" y2="60" stroke="#fff" stroke-width="4" />
+        <line x1="260" y1="60" x2="260" y2="120" stroke="#fff" stroke-width="6" />
+      </svg>
+    </div>
+    <div class="org-logo">
+      <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" />
+    </div>
+  </div>
+  <div class="vsl-placeholder">
+    VSL
+  </div>
+</body>
+</html> 
