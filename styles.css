@@ -1005,6 +1005,13 @@ section h2 {
   transform: translateX(0); /* Moves to center on hover */
 }
 
+/* Mobile-specific pricing button positioning */
+@media (max-width: 768px) {
+  .pricing-card .btn-primary span {
+    transform: translateX(-75px); /* Half the distance to the edge on mobile */
+  }
+}
+
 
 /* FAQ Section */
 .faq-list {
