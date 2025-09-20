@@ -4,39 +4,225 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms and Conditions | VISCA</title>
+  <meta name="description" content="VISCA Solutions Terms of Service - Terms and conditions for using our AI solutions and services.">
+  <meta name="keywords" content="terms of service, terms and conditions, VISCA terms">
+  <meta name="author" content="VISCA Solutions">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viscaai.com/terms">
+  <meta property="og:title" content="Terms of Service | VISCA Solutions">
+  <meta property="og:description" content="VISCA Solutions Terms of Service - Terms and conditions for using our AI solutions and services.">
+  <meta property="og:image" content="https://viscaai.com/images/visca_solutions_logo.webp">
+  
   <link rel="stylesheet" href="../styles.css">
   <style>
-    body { background: #000; color: #fff; }
-    .policy-container { max-width: 800px; margin: 60px auto; padding: 40px; background: rgba(0,0,0,0.85); border-radius: 16px; box-shadow: 0 0 24px #111; }
-    h1, h2, h3 { color: #fff; }
-    a { color: #85a5ff; }
+    body { 
+      background: var(--black); 
+      color: var(--white); 
+      font-family: var(--font-primary);
+      line-height: 1.6;
+    }
+    
+    .policy-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .policy-header h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #7ee6fa 50%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .policy-header .last-updated {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    
+    .policy-container { 
+      max-width: 900px; 
+      margin: 0 auto; 
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .policy-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(126, 230, 250, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 183, 213, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .policy-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .policy-content h2 {
+      color: var(--white);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1.5rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--opal-blue);
+      display: inline-block;
+    }
+    
+    .policy-content h3 {
+      color: var(--white);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    .policy-content p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    
+    .policy-content ul {
+      margin: 1.5rem 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    .policy-content li {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    
+    .policy-content li::before {
+      content: "•";
+      color: var(--opal-blue);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    
+    .policy-content a { 
+      color: var(--opal-blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .policy-content a:hover {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      background: rgba(126, 230, 250, 0.1);
+      border: 1px solid var(--opal-blue);
+      border-radius: 12px;
+      color: var(--opal-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      background: var(--opal-blue);
+      color: var(--black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(126, 230, 250, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .policy-container {
+        margin: 1rem;
+        padding: 1.5rem;
+        border-radius: 16px;
+      }
+      
+      .policy-header {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+      }
+      
+      .policy-content h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem 0;
+      }
+      
+      .policy-content p,
+      .policy-content li {
+        font-size: 1rem;
+      }
+    }
   </style>
   <link rel="icon" type="image/webp" href="../images/white_icon.WebP" />
 </head>
 <body>
   <div class="policy-container">
-    <h1>Terms and Conditions</h1>
-    <p>Last updated: June 2025</p>
-    <p>Welcome to VISCA. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing this website, you agree to be bound by these Terms and Conditions and all applicable laws and regulations.</p>
-    <h2>2. Use of the Website</h2>
-    <ul>
-      <li>You may use the website for lawful purposes only.</li>
-      <li>You must not use the website in any way that may damage, disable, or impair the site.</li>
-      <li>Unauthorized use may give rise to a claim for damages and/or be a criminal offense.</li>
-    </ul>
-    <h2>3. Intellectual Property</h2>
-    <p>All content on this website, including text, graphics, logos, and images, is the property of VISCA or its licensors and is protected by copyright laws.</p>
-    <h2>4. Limitation of Liability</h2>
-    <p>VISCA is not liable for any damages arising from the use or inability to use the website or any information provided on the website.</p>
-    <h2>5. Changes to Terms</h2>
-    <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on this page.</p>
-    <h2>6. Governing Law</h2>
-    <p>These Terms and Conditions are governed by the laws of the United Kingdom.</p>
-    <h2>Contact Us</h2>
-    <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:james@viscaai.com">james@viscaai.com</a>.</p>
-    <p><a href="../index.html" style="color:#85a5ff;">&larr; Back to Home</a></p>
+    <div class="policy-header">
+      <h1>Terms and Conditions</h1>
+      <p class="last-updated">Last updated: June 2025</p>
+    </div>
+    
+    <div class="policy-content">
+      <p>Welcome to VISCA. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+      
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing this website, you agree to be bound by these Terms and Conditions and all applicable laws and regulations.</p>
+      
+      <h2>2. Use of the Website</h2>
+      <ul>
+        <li>You may use the website for lawful purposes only.</li>
+        <li>You must not use the website in any way that may damage, disable, or impair the site.</li>
+        <li>Unauthorized use may give rise to a claim for damages and/or be a criminal offense.</li>
+      </ul>
+      
+      <h2>3. Intellectual Property</h2>
+      <p>All content on this website, including text, graphics, logos, and images, is the property of VISCA or its licensors and is protected by copyright laws.</p>
+      
+      <h2>4. Limitation of Liability</h2>
+      <p>VISCA is not liable for any damages arising from the use or inability to use the website or any information provided on the website.</p>
+      
+      <h2>5. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on this page.</p>
+      
+      <h2>6. Governing Law</h2>
+      <p>These Terms and Conditions are governed by the laws of the United Kingdom.</p>
+      
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:james@viscaai.com">james@viscaai.com</a>.</p>
+      
+      <a href="../index.html" class="back-link">
+        <span>←</span> Back to Home
+      </a>
+    </div>
   </div>
 </body>
 </html> 

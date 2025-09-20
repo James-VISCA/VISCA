@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who are we?</title>
+  <title>Who are we? - VISCA Team</title>
+  <meta name="description" content="Meet the VISCA team: James Porter (Co-Founder/COO) and Nelson Porter (Co-Founder/CMO). AI experts with backgrounds in Applied AI and Marketing.">
+  <meta name="keywords" content="VISCA team, AI experts, James Porter, Nelson Porter, AI founders, AI leadership">
+  <meta name="author" content="VISCA Solutions">
+  
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="profile">
+        <meta property="og:url" content="https://viscaai.com/who-are-we">
+        <meta property="og:title" content="Meet the VISCA Team - AI Experts">
+        <meta property="og:description" content="Meet James and Nelson Porter, the AI experts behind VISCA Solutions. Transforming businesses with cutting-edge AI technology.">
+        <meta property="og:image" content="https://viscaai.com/images/visca_solutions_logo.webp">
+  
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/webp" href="images/white_icon.WebP" />
   <style>
     body { background:#000; color:#fff; min-height:100vh; margin:0; }
     .org-wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; }
@@ -20,20 +32,35 @@
     .org-logo img { width:150px; height:auto; background:none; border-radius:0; display:block; margin:0 auto; }
     .org-name { margin-top:10px; font-size:1.15rem; font-weight:700; color:var(--text-primary,#fff); text-align:center; }
     @media (max-width:900px) { .org-row { flex-direction:column; gap:48px; } .org-card { min-width:0; width:90vw; } }
-    .vsl-placeholder {
-      margin: 60px auto 0 auto;
-      width: 480px;
-      max-width: 90vw;
-      height: 270px;
-      background: #222;
-      color: #bbb;
+    .home-button {
+      position: relative;
+      margin: 3rem auto 2rem auto;
+      padding: 0.75rem 1.5rem;
+      background: rgba(126, 230, 250, 0.1);
+      border: 1px solid var(--opal-blue);
+      border-radius: 12px;
+      color: var(--opal-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      border-radius: 18px;
-      border: 2px dashed #444;
-      text-align: center;
+      gap: 0.5rem;
+      width: fit-content;
+    }
+    .home-button:hover {
+      background: var(--opal-blue);
+      color: var(--black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(126, 230, 250, 0.3);
+    }
+    @media (max-width: 768px) {
+      .home-button {
+        margin: 2rem auto 1.5rem auto;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -50,7 +77,7 @@
         <div class="org-img"></div>
         <div class="org-name">Nelson Porter</div>
         <div class="org-title">Co-Founder/CMO</div>
-        <div class="org-desc">Marketing<br>Portsmouth University of London</div>
+        <div class="org-desc">Marketing<br>Brunel University of London</div>
       </div>
     </div>
     <div class="org-connector-wrap">
@@ -64,8 +91,9 @@
       <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" />
     </div>
   </div>
-  <div class="vsl-placeholder">
-    VSL
-  </div>
+  
+  <a href="index.html" class="home-button">
+    <span>←</span> Home
+  </a>
 </body>
 </html> 
