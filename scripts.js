@@ -142,55 +142,53 @@ function initScrollAnimations() {
   });
 }
 
-// Interactive Triangle Grid
+// Interactive Triangle Grid - Optimized
 function initTriangleGrid() {
   const triangleContainer = document.getElementById('floating-shapes');
   if (!triangleContainer) return;
   
-  const triangleSize = 60; // Base size for triangles
+  const triangleSize = 60;
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
   
-  // Calculate grid dimensions
-  const cols = Math.ceil(viewportWidth / triangleSize) + 2;
-  const rows = Math.ceil(viewportHeight / triangleSize) + 2;
+  // Calculate grid dimensions with reduced density for performance
+  const cols = Math.ceil(viewportWidth / (triangleSize * 1.5)) + 1;
+  const rows = Math.ceil(viewportHeight / (triangleSize * 1.5)) + 1;
   
-  // Generate triangles in a hexagonal pattern
+  // Use DocumentFragment for better performance
+  const fragment = document.createDocumentFragment();
+  
+  // Generate triangles with reduced count
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
+      // Skip some triangles for performance
+      if ((row + col) % 2 === 0) continue;
+      
       // Create upward triangle
       const triangleUp = document.createElement('div');
       triangleUp.className = 'triangle up';
-      triangleUp.style.left = (col * triangleSize) + 'px';
-      triangleUp.style.top = (row * triangleSize) + 'px';
+      triangleUp.style.left = (col * triangleSize * 1.5) + 'px';
+      triangleUp.style.top = (row * triangleSize * 1.5) + 'px';
       
       // Offset every other row for hexagonal pattern
       if (row % 2 === 1) {
-        triangleUp.style.left = (col * triangleSize + triangleSize / 2) + 'px';
+        triangleUp.style.left = (col * triangleSize * 1.5 + triangleSize / 2) + 'px';
       }
       
-      triangleContainer.appendChild(triangleUp);
-      
-      // Create downward triangle
-      const triangleDown = document.createElement('div');
-      triangleDown.className = 'triangle down';
-      triangleDown.style.left = (col * triangleSize) + 'px';
-      triangleDown.style.top = (row * triangleSize + triangleSize / 2) + 'px';
-      
-      // Offset every other row for hexagonal pattern
-      if (row % 2 === 1) {
-        triangleDown.style.left = (col * triangleSize + triangleSize / 2) + 'px';
-      }
-      
-      triangleContainer.appendChild(triangleDown);
+      fragment.appendChild(triangleUp);
     }
   }
   
+  triangleContainer.appendChild(fragment);
   
-  // Handle window resize
+  // Debounced resize handler
+  let resizeTimeout;
   window.addEventListener('resize', () => {
-    triangleContainer.innerHTML = '';
-    initTriangleGrid();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      triangleContainer.innerHTML = '';
+      initTriangleGrid();
+    }, 150);
   });
 }
 
@@ -224,15 +222,26 @@ function initImageLoading() {
   });
 }
 
-// Initialize everything when DOM is loaded
+// Initialize everything when DOM is loaded - Optimized
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize all features
+  // Use requestIdleCallback for non-critical features
+  const initNonCritical = () => {
+    initTriangleGrid();
+    initScrollAnimations();
+  };
+  
+  // Initialize critical features immediately
   initTyping();
   initFAQ();
   initCalendarLinks();
-  initScrollAnimations();
-  initTriangleGrid();
   initImageLoading();
+  
+  // Initialize non-critical features when browser is idle
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initNonCritical, { timeout: 2000 });
+  } else {
+    setTimeout(initNonCritical, 100);
+  }
   
   // Add fade-in class to hero content
   const heroContent = document.querySelector('.hero-content');

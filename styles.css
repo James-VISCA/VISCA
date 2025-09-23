@@ -22,20 +22,30 @@
   box-sizing: border-box;
 }
 
-/* Loading States */
+/* Loading States - Optimized */
 img.loading {
   opacity: 0.3;
   transition: opacity 0.3s ease;
+  filter: blur(2px);
 }
 
 img.loaded {
   opacity: 1;
   transition: opacity 0.3s ease;
+  filter: none;
 }
 
 img.error {
   opacity: 0.5;
   filter: grayscale(100%);
+}
+
+/* Critical image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 /* Button Loading States */
@@ -113,7 +123,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Interactive Triangle Grid Background */
+/* Interactive Triangle Grid Background - Optimized */
 .triangle-grid {
   position: fixed;
   top: 0;
@@ -123,6 +133,7 @@ body {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  will-change: transform;
 }
 
 .triangle-grid::before {
@@ -135,8 +146,8 @@ body {
   background: 
     linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
     linear-gradient(-30deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%);
-  background-size: 60px 60px;
-  transition: all 0.3s ease;
+  background-size: 90px 90px;
+  transition: background 0.3s ease;
   mix-blend-mode: screen;
 }
 
@@ -144,7 +155,7 @@ body {
   background: 
     linear-gradient(30deg, transparent 49%, rgba(126, 230, 250, 0.15) 50%, transparent 51%),
     linear-gradient(-30deg, transparent 49%, rgba(255, 183, 213, 0.15) 50%, transparent 51%);
-  background-size: 60px 60px;
+  background-size: 90px 90px;
 }
 
 /* Local hover effect for individual cards */
@@ -178,9 +189,10 @@ body {
   width: 0;
   height: 0;
   opacity: 0.04;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   mix-blend-mode: screen;
+  will-change: opacity;
 }
 
 .triangle.up {

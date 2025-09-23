@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VISCA - AI Solutions</title>
@@ -25,6 +26,23 @@
   
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/webp" href="images/white_icon.WebP" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="images/visca_solutions_logo.webp" as="image" type="image/webp">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="scripts.js" as="script">
+  
+  <!-- Critical CSS for above-the-fold content -->
+  <style>
+    body{font-family:'Inter',sans-serif;background:#000;color:#fff;margin:0;padding:0;overflow-x:hidden}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:80px 0}
+    .hero-content{max-width:800px;margin:0 auto;padding:0 20px}
+    .logo-hero{margin-bottom:3rem}
+    .logo-img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 8px 32px rgba(126,230,250,0.4));transition:all 0.3s ease}
+    .hero-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;margin-bottom:2.5rem;line-height:1.2;background:linear-gradient(135deg,#ffffff 0%,#7ee6fa 50%,#ffffff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .highlight{color:#7ee6fa;font-weight:600}
+    .btn-primary{background:#fff;color:#000;border:2px solid #fff;padding:16px 32px;font-size:1.1rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;border-radius:12px;cursor:pointer;transition:all 0.3s ease}
+  </style>
   
   <!-- Analytics Tracking (Replace with your actual tracking ID) -->
         <!-- Google Analytics -->
@@ -76,7 +94,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="logo-hero">
-          <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" class="logo-img" />
+          <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" class="logo-img" loading="eager" width="120" height="120" />
         </div>
         <h1 class="hero-title">
           Visionary <span class="highlight">AI Solutions</span> that
@@ -232,7 +250,7 @@
             <p>At VISCA, we combine cutting-edge AI technology with deep business understanding to deliver solutions that drive real transformation. Our adaptive AI systems learn and evolve with your business needs.</p>
           </div>
           <div class="why-logo">
-            <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" class="logo-img" />
+            <img src="images/visca_solutions_logo.webp" alt="VISCA Logo" class="logo-img" loading="lazy" width="120" height="120" />
           </div>
         </div>
       </div>
@@ -250,7 +268,7 @@
             <div class="price">Custom</div>
             <ul>
               <li>1 of our services</li>
-              <li>1 dashboard</li>
+              <li>Limited dashboard</li>
               <li>1-week free audit</li>
               <li>Integration support</li>
               <li>Monthly check up</li>
@@ -342,10 +360,10 @@
             <p class="footer-title">FOLLOW</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/james-porter-467164334/" target="_blank">
-                <img src="images/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+                <img src="images/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" />
               </a>
               <a href="https://www.youtube.com/@viscaai" target="_blank">
-                <img src="images/youtube.webp" alt="YouTube" width="24" height="24" />
+                <img src="images/youtube.webp" alt="YouTube" width="24" height="24" loading="lazy" />
               </a>
             </div>
           </div>
